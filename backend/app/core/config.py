@@ -3,7 +3,7 @@ import os
 class Settings:
     PROJECT_NAME: str = "Intelligent Document Extraction Platform"
     API_V1_STR: str = "/api/v1"
-    #YOUR API KEY HERE
+    os.getenv("GEMINI_API_KEY", "")
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./documents.db")
     MAX_PAGE_LIMIT: int = 3
 
