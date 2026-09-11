@@ -1,10 +1,9 @@
 import os
+from pydantic_settings import BaseSettings
 
 class Settings:
     PROJECT_NAME: str = "Intelligent Document Extraction Platform"
-    API_V1_STR: str = "/api/v1"
-    os.getenv("GEMINI_API_KEY", "")
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./documents.db")
-    MAX_PAGE_LIMIT: int = 3
-
+    
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    
 settings = Settings()
